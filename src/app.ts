@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.get("/", (_req, res) => {
-  res.send("Expense Tracker API is running...");
+  res.send("Personal Book API Expense Tracker API is running...");
 });
 
 app.use("/api/auth", authRoutes);
