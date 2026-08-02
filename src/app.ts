@@ -6,6 +6,7 @@ import {
   errorHandler,
 } from "./common/middlewares/error.middleware.js";
 import authRoutes from "./modules/auth/auth.routes.js";
+import booksRoutes from "./modules/book/book.routes.js";
 
 const app = express();
 app.set("etag", false);
@@ -30,6 +31,8 @@ app.get("/", (_req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/books", booksRoutes);
+
 
 app.use(notFound);
 app.use(errorHandler);
