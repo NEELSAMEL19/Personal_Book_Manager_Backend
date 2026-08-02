@@ -27,11 +27,6 @@ export const errorHandler = (err: unknown, _req: Request, res: Response, _next: 
     message = "Duplicate field value entered";
   }
 
-  if (err && typeof err === "object" && "code" in err && err.code === "LIMIT_FILE_SIZE") {
-    statusCode = 400;
-    message = "File too large. Max size is 5MB.";
-  }
-
   res.status(statusCode).json({
     success: false,
     message,
