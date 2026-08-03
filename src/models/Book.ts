@@ -4,7 +4,7 @@ export interface IBook extends Document {
   title: string;
   author: string;
   tags: string[];
-  status: "to-read" | "reading" | "read";
+  status: "want to read" | "reading" | "completed";
   user: Types.ObjectId;
 }
 
@@ -15,8 +15,8 @@ const bookSchema = new mongoose.Schema<IBook>(
     tags: { type: [String], default: [] },
     status: {
       type: String,
-      enum: ["to-read", "reading", "read"],
-      default: "to-read",
+      enum: ["want to read", "reading", "completed"],
+      default: "want to read",
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,
