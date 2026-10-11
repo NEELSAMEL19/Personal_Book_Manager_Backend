@@ -88,7 +88,7 @@ NODE_ENV=development
 1. Clone the repository
 
 ```bash
-   git clone https://github.com/your-username/personal-book-manager-backend.git
+   git clone https://github.com/NEELSAMEL19/Personal_Book_Manager_Backend.git
    cd personal-book-manager-backend
 ```
 
